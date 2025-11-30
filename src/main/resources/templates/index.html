@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>File Storage App</title>
+</head>
+<body>
+    <h1>Welcome to File Storage App</h1>
+    <p>Upload and download your files securely.</p>
+
+    <h2>Upload File</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <h2>Download File</h2>
+    <form action="/download" method="get">
+        <input type="text" name="filename" placeholder="Enter filename" required>
+        <button type="submit">Download</button>
+    </form>
+
+    <h3>Note:</h3>
+    <p>This app stores files in the 'storage' directory on the server.</p>
+</body>
+</html>
