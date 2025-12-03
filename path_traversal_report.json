@@ -1,0 +1,190 @@
+{
+    "version": "1.144.0",
+    "results": [
+        {
+            "check_id": "java.spring.security.injection.tainted-file-path.tainted-file-path",
+            "path": "Random_Path_Traversal_Project\\src\\main\\java\\com\\example\\randompathtraversal\\FileController.java",
+            "start": {
+                "line": 23,
+                "col": 25,
+                "offset": 721
+            },
+            "end": {
+                "line": 23,
+                "col": 73,
+                "offset": 769
+            },
+            "extra": {
+                "message": "Detected user input controlling a file path. An attacker could control the location of this file, to include going backwards in the directory with '../'. To address this, ensure that user-controlled variables in file paths are sanitized. You may also consider using a utility method such as org.apache.commons.io.FilenameUtils.getName(...) to only retrieve the file name from the path.",
+                "metadata": {
+                    "cwe": [
+                        "CWE-23: Relative Path Traversal"
+                    ],
+                    "owasp": [
+                        "A01:2021 - Broken Access Control"
+                    ],
+                    "references": [
+                        "https://owasp.org/www-community/attacks/Path_Traversal"
+                    ],
+                    "category": "security",
+                    "technology": [
+                        "java",
+                        "spring"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "impact": "HIGH",
+                    "likelihood": "MEDIUM",
+                    "confidence": "HIGH",
+                    "interfile": true,
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Path Traversal"
+                    ],
+                    "source": "https://semgrep.dev/r/java.spring.security.injection.tainted-file-path.tainted-file-path",
+                    "shortlink": "https://sg.run/x9o0"
+                },
+                "severity": "ERROR",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "java.spring.security.injection.tainted-file-path.tainted-file-path",
+            "path": "Random_Path_Traversal_Project\\src\\main\\java\\com\\example\\randompathtraversal\\FileController.java",
+            "start": {
+                "line": 35,
+                "col": 25,
+                "offset": 1229
+            },
+            "end": {
+                "line": 35,
+                "col": 56,
+                "offset": 1260
+            },
+            "extra": {
+                "message": "Detected user input controlling a file path. An attacker could control the location of this file, to include going backwards in the directory with '../'. To address this, ensure that user-controlled variables in file paths are sanitized. You may also consider using a utility method such as org.apache.commons.io.FilenameUtils.getName(...) to only retrieve the file name from the path.",
+                "metadata": {
+                    "cwe": [
+                        "CWE-23: Relative Path Traversal"
+                    ],
+                    "owasp": [
+                        "A01:2021 - Broken Access Control"
+                    ],
+                    "references": [
+                        "https://owasp.org/www-community/attacks/Path_Traversal"
+                    ],
+                    "category": "security",
+                    "technology": [
+                        "java",
+                        "spring"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "impact": "HIGH",
+                    "likelihood": "MEDIUM",
+                    "confidence": "HIGH",
+                    "interfile": true,
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Path Traversal"
+                    ],
+                    "source": "https://semgrep.dev/r/java.spring.security.injection.tainted-file-path.tainted-file-path",
+                    "shortlink": "https://sg.run/x9o0"
+                },
+                "severity": "ERROR",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        }
+    ],
+    "errors": [],
+    "paths": {
+        "scanned": [
+            "Random_Path_Traversal_Project\\src\\main\\java\\com\\example\\randompathtraversal\\CoolFileController.java",
+            "Random_Path_Traversal_Project\\src\\main\\java\\com\\example\\randompathtraversal\\FileController.java",
+            "Random_Path_Traversal_Project\\src\\main\\java\\com\\example\\randompathtraversal\\FileService.java",
+            "Random_Path_Traversal_Project\\src\\main\\java\\com\\example\\randompathtraversal\\FileStorageApplication.java",
+            "Random_Path_Traversal_Project\\src\\main\\java\\com\\example\\randompathtraversal\\WebController.java"
+        ]
+    },
+    "time": {
+        "rules": [],
+        "rules_parse_time": 0.1097564697265625,
+        "profiling_times": {
+            "config_time": 1.1804795265197754,
+            "core_time": 0.4994323253631592,
+            "ignores_time": 0.0,
+            "total_time": 1.6799118518829346
+        },
+        "parsing_time": {
+            "total_time": 0.0,
+            "per_file_time": {
+                "mean": 0.0,
+                "std_dev": 0.0
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_files": []
+        },
+        "scanning_time": {
+            "total_time": 0.10927128791809082,
+            "per_file_time": {
+                "mean": 0.021854257583618163,
+                "std_dev": 5.850437713888823e-05
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_files": []
+        },
+        "matching_time": {
+            "total_time": 0.0,
+            "per_file_and_rule_time": {
+                "mean": 0.0,
+                "std_dev": 0.0
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_rules_on_files": []
+        },
+        "tainting_time": {
+            "total_time": 0.0,
+            "per_def_and_rule_time": {
+                "mean": 0.0,
+                "std_dev": 0.0
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_rules_on_defs": []
+        },
+        "fixpoint_timeouts": [],
+        "prefiltering": {
+            "project_level_time": 0.0,
+            "file_level_time": 0.0,
+            "rules_with_project_prefilters_ratio": 0.0,
+            "rules_with_file_prefilters_ratio": 0.95,
+            "rules_selected_ratio": 0.11333333333333333,
+            "rules_matched_ratio": 0.11333333333333333
+        },
+        "targets": [],
+        "total_bytes": 0,
+        "max_memory_bytes": 209534080
+    },
+    "engine_requested": "OSS",
+    "skipped_rules": [],
+    "profiling_results": []
+}

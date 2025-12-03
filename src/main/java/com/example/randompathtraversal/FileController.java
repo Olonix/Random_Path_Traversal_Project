@@ -10,10 +10,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-@RestController
+// @RestController
 public class FileController {
 
-    @PostMapping("/upload")
+    // @PostMapping("/upload")
     public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
         try {
             // Create storage directory if not exists
@@ -28,7 +28,7 @@ public class FileController {
         }
     }
 
-    @GetMapping("/download")
+    // @GetMapping("/download")
     public ResponseEntity<byte[]> downloadFile(@RequestParam String filename) {
         try {
             //
